@@ -105,5 +105,13 @@ namespace GameEngine.Test
             //Assert.True(sut.Health >= 101 && sut.Health <= 200);
             Assert.InRange<int>(sut.Health, 101, 200);
         }
+
+        [Fact]
+        public void NotHaveNickNameByDefault()
+        {
+            PlayerCharacter sut = new PlayerCharacter();
+
+            Assert.Null(sut.Nickname);
+        }
     }
 }
